@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="PulseWire News delivers breaking headlines, trending stories, and local coverage with ultra-fast performance for mobile users." />
+    <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <title>PulseWire News — Fast. Trusted. Always On.</title>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://plus.unsplash.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "PulseWire News",
+        "url": "https://example.com",
+        "logo": "https://example.com/logo.png",
+        "sameAs": [
+          "https://www.facebook.com",
+          "https://www.instagram.com",
+          "https://www.youtube.com"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="breaking-ticker" aria-live="polite">
+        <p class="ticker-label">Breaking</p>
+        <div class="ticker-track" id="ticker-track"></div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <div class="brand-block">
+          <span class="brand">PulseWire</span>
+          <span class="tagline">Credible. Fast. Everywhere.</span>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#hero">Top Stories</a>
+          <a href="#politics">Politics</a>
+          <a href="#entertainment">Entertainment</a>
+          <a href="#sports">Sports</a>
+          <a href="#local">Local</a>
+        </div>
+
+        <div class="nav-tools">
+          <label class="search-wrap" for="search-input">
+            <span class="sr-only">Search headlines</span>
+            <input id="search-input" type="search" placeholder="Search headlines" />
+          </label>
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+          <button id="lang-toggle" class="lang-btn" aria-label="Toggle language">മ/EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-grid">
+      <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Top Headlines</h1>
+        <div class="hero-grid" id="hero-grid"></div>
+      </section>
+
+      <aside class="trending-sidebar" aria-labelledby="trending-heading">
+        <h2 id="trending-heading">Trending Now</h2>
+        <ul id="trending-list" class="trending-list"></ul>
+      </aside>
+
+      <section id="quick-cards" class="quick-cards" aria-labelledby="quick-heading">
+        <h2 id="quick-heading">Quick Reads</h2>
+        <div class="quick-grid" id="quick-grid"></div>
+      </section>
+
+      <section id="politics" class="category-section" aria-labelledby="politics-heading">
+        <h2 id="politics-heading">Politics</h2>
+        <div class="category-grid" data-category="Politics"></div>
+      </section>
+
+      <section id="entertainment" class="category-section" aria-labelledby="ent-heading">
+        <h2 id="ent-heading">Entertainment</h2>
+        <div class="category-grid" data-category="Entertainment"></div>
+      </section>
+
+      <section id="sports" class="category-section" aria-labelledby="sports-heading">
+        <h2 id="sports-heading">Sports</h2>
+        <div class="category-grid" data-category="Sports"></div>
+      </section>
+
+      <section id="local" class="category-section" aria-labelledby="local-heading">
+        <h2 id="local-heading">Local News</h2>
+        <div class="category-grid" data-category="Local News"></div>
+      </section>
+    </main>
+
+    <template id="story-template">
+      <article class="story-card">
+        <img loading="lazy" decoding="async" alt="" width="640" height="360" />
+        <div class="story-content">
+          <span class="badge"></span>
+          <h3></h3>
+          <p></p>
+          <div class="meta"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
